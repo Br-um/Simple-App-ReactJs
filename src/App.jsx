@@ -1,10 +1,11 @@
 import './App.css'
-import CardPessoa from './components/CardPessoa'
+import Header from './components/Header'
+import Form from './components/Form'
 function App() {
   return (
     <div className="App">
-      <h1>Bom dia</h1>
-      <CardPessoa nome="Henrique"/>
+      <Header/>
+      <Form />
     </div>
   );
 }
