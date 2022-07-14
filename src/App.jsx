@@ -1,12 +1,17 @@
 import './App.css'
-import Header from './components/Header'
-import Form from './components/Form'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Nav from './components/Nav'
+import Home from './pages/Home'
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Form />
-    </div>
+    <BrowserRouter>
+      <Nav />
+      <div className='content'>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
