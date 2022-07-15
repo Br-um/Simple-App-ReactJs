@@ -1,9 +1,10 @@
 .Box{
     border-radius: 10px;
-    border: 1px solid #00fe6e;
+    border: 2px solid #00fe6e;
     display: flex;
     height: auto;
     flex-direction: column;
+    margin: 10px;
 }
 .BoxH3{
     display: flex;
@@ -24,18 +25,24 @@
 }
 .BoxUl{
     display: flex;
-    width: 400px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px;
+    width: auto;
     left: 0;
-    flex-direction: row;
-    justify-content: space-around;
+    height: auto;
 }
 .BoxUl li{
     width: auto;
     height: 30px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 .BoxUl li:hover{
     text-shadow: 0px 0px 2px #fff;
+}
+.BoxInputField{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

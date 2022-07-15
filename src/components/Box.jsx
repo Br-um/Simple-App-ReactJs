@@ -8,24 +8,30 @@ function TextBox(props) {
             style={{
                 ...props.wt,
                 ...props.hg,
+                ...props.bk
             }}
         >
             {props.title &&
                 <h3
                     className={styles.BoxH3}
-                    style={props.description && { borderBottom: '1px solid #00fe6e' }}
+                    style={props.description && { borderBottom: '2px solid #00fe6e' }}
                 >
                     {props.title}</h3>
             }
             {props.description &&
-                <text className={styles.BoxText} 
-                style={{
-                    ...props.jC,
-                    ...props.aI
-                }}
+                <text className={styles.BoxText}
+                    style={{
+                        ...props.jC,
+                        ...props.aI
+                    }}
                 >
                     {props.description}</text>}
 
+            {props.inputs &&
+                <div className={styles.BoxInputField}>
+                    {props.inputs}
+                </div>
+            }
             <ul className={styles.BoxUl}>
                 {props.instagram &&
                     <a href={props.instagramLink}><li><AiOutlineInstagram />{props.instagram}</li></a>

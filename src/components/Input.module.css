@@ -1,0 +1,19 @@
+.InputBox{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: 15px;
+}
+.InputLabel{
+    margin-bottom: 5px;
+    color: #00fe6e;
+    font-weight: bold;
+}
+.Input{
+    color: #000;
+    border: 1px solid #00fe6e;
+}
+.Input:focus{
+    box-shadow: 0 0 2px #00fe6e;
+    outline: 0;
+}
