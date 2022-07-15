@@ -6,13 +6,13 @@ function Nav(props) {
         <nav className={style.Nav}>
             <ul>
                 <li>
-                    <Link to='/'>
-                        <p>HOME</p>
+                    <Link to='/' className={style.Item}>
+                        HOME
                     </Link>
                 </li>
                 <li>
-                    <Link to='/postar'>
-                        <p>POSTAR</p>
+                    <Link to='/postar' className={style.Item}>
+                        POSTAR
                     </Link>
                 </li>
             </ul>

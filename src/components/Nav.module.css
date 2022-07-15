@@ -3,20 +3,32 @@
     display: flex;
     width: 100%;
     height: 60px;
-    background: #505050;
+    background: #0a0a0a;
     justify-content: end;
+    align-items: center;
 }
 .Nav ul{
     width: 150px;
     height: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
 }
 .Nav li{
+    display: flex;
     font-size: 11px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
-.Nav li p:hover{
+
+.Item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Item:hover{
     width: 0 auto;
-    text-shadow: 0px 0px 1px #fff;
+    text-shadow: 0px 0px 2px #fff;
 }

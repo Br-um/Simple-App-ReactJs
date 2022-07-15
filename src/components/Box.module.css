@@ -1,0 +1,41 @@
+.Box{
+    border-radius: 10px;
+    border: 1px solid #00fe6e;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+}
+.BoxH3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.BoxText{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-wrap: break-word;  
+    word-wrap: break-word; 
+    word-break: break-word;
+    margin: 10px;
+    height: auto;
+}
+.BoxUl{
+    display: flex;
+    width: 400px;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.BoxUl li{
+    width: auto;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.BoxUl li:hover{
+    text-shadow: 0px 0px 2px #fff;
+}
