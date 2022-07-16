@@ -6,9 +6,9 @@ function TextBox(props) {
         <div
             className={styles.Box}
             style={{
-                ...props.wt,
-                ...props.hg,
-                ...props.bk
+                width: props.wt,
+                heigth: props.hg,
+                background: props.bk
             }}
         >
             {props.title &&
@@ -21,8 +21,8 @@ function TextBox(props) {
             {props.description &&
                 <text className={styles.BoxText}
                     style={{
-                        ...props.jC,
-                        ...props.aI
+                        justifyContent: props.jC,
+                        alignItems: props.aI
                     }}
                 >
                     {props.description}</text>}

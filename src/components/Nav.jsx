@@ -11,8 +11,13 @@ function Nav(props) {
                     </Link>
                 </li>
                 <li>
-                    <Link to='/postar' className={style.Item}>
+                    <Link to='/post' className={style.Item}>
                         POSTAR
+                    </Link>
+                </li>
+                <li>
+                    <Link to='/posts' className={style.Item}>
+                        POSTS
                     </Link>
                 </li>
             </ul>
