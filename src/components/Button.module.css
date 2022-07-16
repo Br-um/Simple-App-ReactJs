@@ -1,5 +1,11 @@
 .Button{
     border-radius: 10px;
-    border: #00fe6e;
-    height: 100px;
+    border: 1px solid #00fe6e;
+    padding: 10px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.3);
+}
+.Button:hover{
+    color: #00fe6e;
+    cursor: pointer;
 }

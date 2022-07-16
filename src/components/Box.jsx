@@ -1,6 +1,7 @@
 import styles from './Box.module.css'
 import { AiOutlineInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { FaFacebookF } from 'react-icons/fa'
+
 function TextBox(props) {
     return (
         <div
@@ -10,7 +11,12 @@ function TextBox(props) {
                 heigth: props.hg,
                 background: props.bk
             }}
+
+            key={ props.postValue &&
+                props.postValue.map(id => [id.id]) 
+                }
         >
+        
             {props.title &&
                 <h3
                     className={styles.BoxH3}
@@ -18,6 +24,7 @@ function TextBox(props) {
                 >
                     {props.title}</h3>
             }
+
             {props.description &&
                 <text className={styles.BoxText}
                     style={{
@@ -27,9 +34,15 @@ function TextBox(props) {
                 >
                     {props.description}</text>}
 
-            {props.inputs &&
+            {props.postValue &&
+                props.postValue.map((val) => (
+                    <text className={styles.BoxText}>
+                        {val.name}
+                    </text>))}
+
+            {props.form &&
                 <div className={styles.BoxInputField}>
-                    {props.inputs}
+                    {props.form}
                 </div>
             }
             <ul className={styles.BoxUl}>

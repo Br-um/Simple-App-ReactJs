@@ -4,7 +4,7 @@ function Home(params) {
     return (
         <div className='content'>
             <Box
-                title="Bem vindo!"
+                title="Welcome!"
                 jC="center"
                 aI="flex-start"
                 description=

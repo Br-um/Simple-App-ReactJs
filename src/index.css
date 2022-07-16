@@ -16,7 +16,6 @@ body,html, #root{
 
 .content{
   position: absolute;
-  grid-template-columns: 1fr;
   justify-items: center;
   display: grid;
   top: 80px;
@@ -24,6 +23,9 @@ body,html, #root{
   right: 5%;
   width: 90%;
   height: auto;
+}
+.colAuto{
+  grid-template-columns: repeat(auto-fill, 200px);
 }
 .col2{
   grid-template-columns: 1fr 1fr;

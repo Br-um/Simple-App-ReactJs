@@ -12,7 +12,7 @@ function Nav(props) {
                 </li>
                 <li>
                     <Link to='/post' className={style.Item}>
-                        POSTAR
+                        ADD POST
                     </Link>
                 </li>
                 <li>

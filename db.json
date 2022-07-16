@@ -1,0 +1,20 @@
+{
+    "projects": [],
+    "product": [
+    {
+        "id": 1,
+        "name": "Apple",
+        "value": ""
+    },
+    {
+        "id": 2,
+        "name": "Meet",
+        "value": ""
+    },
+    {
+        "id": 3,
+        "name": "Orange",
+        "value": ""
+    }
+]
+}
