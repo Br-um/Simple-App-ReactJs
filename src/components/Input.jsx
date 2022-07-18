@@ -12,6 +12,7 @@ function Input(props) {
                 placeholder={props.placeholder}
                 value={props.value}
                 name={props.name}
+                onChange={props.handleOnChange}
             />
         </div>
     )
