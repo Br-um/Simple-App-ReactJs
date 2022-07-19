@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './Form.module.css'
 import Input from './Input'
 import Button from './Button'
-function Form( {handleSubmit, productData } ) {
+function ProductForm({ handleSubmit, productData }) {
 
     const [product, setProduct] = useState(productData || {})
 
@@ -23,12 +23,14 @@ function Form( {handleSubmit, productData } ) {
                 type="text"
                 label="Product:"
                 placeholder="Ex: Apple"
+                name="name"
                 handleOnChange={handleChange}
             />
             <Input
                 type="text"
                 label="Valor:"
                 placeholder="Ex: 10"
+                name="value"
                 handleOnChange={handleChange}
             />
             <Button
@@ -40,4 +42,4 @@ function Form( {handleSubmit, productData } ) {
     )
 }
 
-export default Form
+export default ProductForm

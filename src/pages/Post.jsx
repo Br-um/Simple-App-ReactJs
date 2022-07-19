@@ -1,25 +1,27 @@
 import Box from '../components/Box'
-import Form from '../components/Form'
+import ProductForm from '../components/ProductForm'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Post() {
+    const API = "http://localhost:5000"
+
+    const navigate = useNavigate()
 
     function createPost(product) {
-        product.value = 0
-        product.name = []
 
-        fetch('https:/localhost:5000/product', {
+        fetch(API + "/product", {
             method: 'POST',
-            mode: 'no-cors',
+            body: JSON.stringify(product),
             headers: {
-                'Content-type': 'application/json',
-                "Access-Control-Allow-Origin": "*"
-            },
-            body: JSON.stringify(product)
+                "Content-Type": "application/json",
+            }
         })
             .then((resp) => resp.json())
             .then((data) => {
                 console.log(data)
+
+                navigate('/posts', { message: 'Produto cadastrado com sucesso!' })
             })
             .catch((err) => console.log(err))
     }
@@ -32,7 +34,7 @@ function Post() {
                 wt="400px"
                 form=
                 {
-                    <Form
+                    <ProductForm
                         handleSubmit={createPost}
                     />
                 }

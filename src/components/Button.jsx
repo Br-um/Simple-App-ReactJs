@@ -1,15 +1,15 @@
 import styles from './Button.module.css'
 
-function Button(props) {
+function Button({ type, wt, value }) {
     return (
         <button className={styles.Button}
-            type={props.type}
+            type={type}
             style=
             {{
-                width: props.wt
+                width: wt
             }}
         >
-            {props.value}
+            {value}
         </button>
     )
 }

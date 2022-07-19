@@ -1,18 +1,18 @@
 import styles from './Input.module.css'
 
-function Input(props) {
+function Input({label, id, type, placeholder, value, name, handleOnChange }) {
     return (
         <div className={styles.InputBox}>
-            <label className={styles.InputLabel} htmlFor={props.id}>
-                {props.label}
+            <label className={styles.InputLabel} htmlFor={id}>
+                {label}
             </label>
             
-            <input id={props.id} className={styles.Input}
-                type={props.type}
-                placeholder={props.placeholder}
-                value={props.value}
-                name={props.name}
-                onChange={props.handleOnChange}
+            <input id={id} className={styles.Input}
+                type={type}
+                placeholder={placeholder}
+                value={value}
+                name={name}
+                onChange={handleOnChange}
             />
         </div>
     )

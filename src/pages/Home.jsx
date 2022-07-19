@@ -1,13 +1,13 @@
 import Box from '../components/Box'
+import web from '../img/web.png'
 
-function Home(params) {
+function Home() {
     return (
         <div className='content'>
             <Box
                 title="Welcome!"
-                jC="center"
                 aI="flex-start"
-                description=
+                content=
                 "° Welcome to a simple react app, here you will learn the basics concepts like components and routes "
                 githubLink='https://github.com/Br-um'
                 github='Br-um'
@@ -16,6 +16,7 @@ function Home(params) {
                 instagram='@henriquebrumm'
                 instagramLink='https://www.instagram.com/henriquebrumm/'
             />
+            <img src={web} alt="web" style={{ width : "300px" }} />
         </div>
     )
 }

@@ -2,65 +2,82 @@ import styles from './Box.module.css'
 import { AiOutlineInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { FaFacebookF } from 'react-icons/fa'
 
-function TextBox(props) {
+function Box({
+    wt, hg, bk, jC, aI,
+
+    postValue, title, content, form,
+
+    facebook, instagram, github,
+    linkedin, facebookLink, instagramLink,
+    githubLink, linkedinLink }) {
+
     return (
         <div
             className={styles.Box}
             style={{
-                width: props.wt,
-                heigth: props.hg,
-                background: props.bk
+                width: wt,
+                heigth: hg,
+                background: bk
             }}
 
-            key={ props.postValue &&
-                props.postValue.map(id => [id.id]) 
-                }
+            key={postValue &&
+                postValue.map(id => [id.id])
+            }
         >
-        
-            {props.title &&
+
+            {title &&
                 <h3
                     className={styles.BoxH3}
-                    style={props.description && { borderBottom: '2px solid #00fe6e' }}
+                    style={content && { borderBottom: '2px solid #00fe6e' }}
                 >
-                    {props.title}</h3>
+                    {title && title}</h3>
             }
 
-            {props.description &&
-                <text className={styles.BoxText}
+            {content &&
+                <p className={styles.BoxText}
                     style={{
-                        justifyContent: props.jC,
-                        alignItems: props.aI
+                        justifyContent: jC,
+                        alignItems: aI
                     }}
                 >
-                    {props.description}</text>}
+                    {content}</p>}
 
-            {props.postValue &&
-                props.postValue.map((val) => (
-                    <text className={styles.BoxText}>
-                        {val.name}
-                    </text>))}
+            {postValue &&
+                <table className={styles.BoxTable}>
+                    <tr>
+                        <th>Nome:</th>
+                        <th>Valor</th>
+                    </tr>
+                    {postValue.map((val) => (
+                        <tr>
+                            <td>{val.name}</td>
+                            <td>{val.value}</td>
+                        </tr>
+                    ))}
+                </table>
+            }
 
-            {props.form &&
+            {form &&
                 <div className={styles.BoxInputField}>
-                    {props.form}
+                    {form}
                 </div>
             }
             <ul className={styles.BoxUl}>
-                {props.instagram &&
-                    <a href={props.instagramLink}><li><AiOutlineInstagram />{props.instagram}</li></a>
+                {instagram &&
+                    <a href={instagramLink}><li><AiOutlineInstagram />{instagram}</li></a>
                 }
-                {props.facebook &&
-                    <a href={props.facebookLink}><li><FaFacebookF />{props.facebook}</li></a>
+                {facebook &&
+                    <a href={facebookLink}><li><FaFacebookF />{facebook}</li></a>
                 }
-                {props.github &&
-                    <a href={props.githubLink}><li><AiFillGithub />{props.github}</li></a>
+                {github &&
+                    <a href={githubLink}><li><AiFillGithub />{github}</li></a>
                 }
-                {props.linkedin &&
-                    <a href={props.linkedinLink}><li><AiFillLinkedin />{props.linkedin}</li></a>
+                {linkedin &&
+                    <a href={linkedinLink}><li><AiFillLinkedin />{linkedin}</li></a>
                 }
             </ul>
 
         </div>
     )
 }
-export default TextBox
+export default Box

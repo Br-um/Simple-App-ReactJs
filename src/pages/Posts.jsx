@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 function Posts() {
     const [product, setProduct] = useState([])
     useEffect(() => {
-        fetch('http://localhost:3000/product', {
+        fetch('http://localhost:5000/product', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -17,9 +17,10 @@ function Posts() {
     }, [])
 
     return (
-        <div className="content colAuto">
+        <div className="content">
             <Box
                 postValue={product}
+                wt="500px"
             />
         </div>
     )
