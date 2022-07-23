@@ -1,0 +1,14 @@
+.Message{
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #d7d7d7;
+    font-weight: bold;
+}
+
+
+.success{
+    background: #026100;
+}
+.error{
+    background: #c20000;
+}

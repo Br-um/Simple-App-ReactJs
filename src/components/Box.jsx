@@ -5,7 +5,7 @@ import { FaFacebookF } from 'react-icons/fa'
 function Box({
     wt, hg, bk, jC, aI,
 
-    postValue, title, content, form,
+    title, content, form, tbody,
 
     facebook, instagram, github,
     linkedin, facebookLink, instagramLink,
@@ -19,10 +19,6 @@ function Box({
                 heigth: hg,
                 background: bk
             }}
-
-            key={postValue &&
-                postValue.map(id => [id.id])
-            }
         >
 
             {title &&
@@ -42,18 +38,17 @@ function Box({
                 >
                     {content}</p>}
 
-            {postValue &&
+            {tbody &&
                 <table className={styles.BoxTable}>
-                    <tr>
-                        <th>Nome:</th>
-                        <th>Valor</th>
-                    </tr>
-                    {postValue.map((val) => (
+                    <thead>
                         <tr>
-                            <td>{val.name}</td>
-                            <td>{val.value}</td>
+                            <th>Nome:</th>
+                            <th>Valor:</th>
                         </tr>
-                    ))}
+                    </thead>
+                    <tbody>
+                        {tbody}
+                    </tbody>
                 </table>
             }
 

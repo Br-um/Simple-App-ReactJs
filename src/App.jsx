@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import Post from './pages/Post'
 import Posts from './pages/Posts'
+import EditProduct from './pages/EditProduct'
 function App() {
   return (
     <BrowserRouter>
@@ -11,8 +12,9 @@ function App() {
       <div className='content'>
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/post' element={<Post />} />
-          <Route exact path='/posts' element={<Posts />} />
+          <Route path='/post' element={<Post />} />
+          <Route path='/posts' element={<Posts />} />
+          <Route path='/edit/:id' element={<EditProduct />}/>
         </Routes>
       </div>
     </BrowserRouter>

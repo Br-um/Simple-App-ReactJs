@@ -21,7 +21,7 @@ function Post() {
             .then((data) => {
                 console.log(data)
 
-                navigate('/posts', { message: 'Produto cadastrado com sucesso!' })
+                navigate('/posts', {state:{ message: 'Produto cadastrado com sucesso!' }})
             })
             .catch((err) => console.log(err))
     }
@@ -30,7 +30,7 @@ function Post() {
     return (
         <div className='content'>
             <Box
-                title="Poste Um Produto"
+                title="Post A Product"
                 wt="400px"
                 form=
                 {

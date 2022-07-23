@@ -1,0 +1,22 @@
+.Tbody td{
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #00fe6e;
+}
+.TbodyRemoveButton{
+    color: #ff0000;
+    cursor: pointer;
+    font-weight: bold;
+}
+.TbodyRemoveButton:hover{
+    color: #ff3e3e;
+}
+.TbodyEditButton{
+    color: #97a400;
+    cursor: pointer;
+    font-weight: bold;
+}
+.TbodyEditButton:hover{
+    color: #eaff00;
+}

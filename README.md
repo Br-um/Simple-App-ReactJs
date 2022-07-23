@@ -1,22 +1,5 @@
 # Welcome to a simple react app with post and get methods.
 
-## Flexive Box
-
-This project have a box component with
-adaptative properties, and among them are:
-
-#### Display Configs
-`wt, hg, bk, jC, aI`
-
-#### Content Configs
-`postValue, title, content, form`
-
-#### Social_Media Configs
-`facebook, instagram, github, linkedin, facebookLink, instagramLink, githubLink, linkedinLink`
-
-
-# FOLLOW THE REACT CONFIGS:
-
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
